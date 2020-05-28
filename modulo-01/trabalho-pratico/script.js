@@ -3,27 +3,33 @@ function handlerChanges() {
     changeBoxColor();
 }
 
+function getInputRangeValue(id) {
+    return document.querySelector(`${id} .range-input`).value
+}
+
+function setInputValue(id, value) {
+    return document.querySelector(`${id} .range-value`).value = value
+}
+
+function getColorsRanges() {
+    return {
+        red: getInputRangeValue("#range-red"),
+        green: getInputRangeValue("#range-green"),
+        blue: getInputRangeValue("#range-blue")
+    }
+}
+
 function changeBoxColor() {
-    var red = document.querySelector("#range-red .range-input").value
-    var green = document.querySelector("#range-green .range-input").value
-    var blue = document.querySelector("#range-blue .range-input").value
-    
-    var newRgbColor = "rgb("+red+", "+green+", "+blue+")";
+    var newRgbColor = "rgb(" + getColorsRanges().red + ", " + getColorsRanges().green + ", " + getColorsRanges().blue +")";
     var colorBox = document.querySelector('.range-color-box')
     colorBox.style.backgroundColor = newRgbColor
 }
 
 function changeInputValues() {
-    var red = document.querySelector("#range-red .range-input").value
-    document.querySelector("#range-red .range-value").value = red;
-    
-    var green = document.querySelector("#range-green .range-input").value
-    document.querySelector("#range-green .range-value").value = green;
-    var blue = document.querySelector("#range-blue .range-input").value
-    document.querySelector("#range-blue .range-value").value = blue;
+    setInputValue("#range-red", getColorsRanges().red);
+    setInputValue("#range-green", getColorsRanges().green);
+    setInputValue("#range-blue", getColorsRanges().blue);
 }
 
-window.addEventListener("load", function() {
-    window.addEventListener("change", handlerChanges)
-})
+window.addEventListener("change", handlerChanges)
 

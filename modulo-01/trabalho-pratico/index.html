@@ -8,27 +8,37 @@
 </head>
 <body>
     <div class="container">
-        <h3>IGTI - Trabalho prático Modulo 01</h3>
-        <div class="range-container" id="range-red">
-            <p class="range-text">(R) Vermelho</p>
-            <input type="range" class="range-input" min="0" max="255" value="0">
-            <input type="text" class="range-value" value="0" disabled>
+        <h3 class="text-center">IGTI - Trabalho prático Modulo 01</h3>
+
+        <div class="range-control" id="range-red">
+            <span class="range-text">(R) Vermelho</span>
+            <span>
+                <input type="range" class="range-input" min="0" max="255" value="0">
+            </span>
+            <span>
+                <input type="text" class="range-value" value="0" disabled>
+            </span>
         </div>
-        <div class="range-container" id="range-green">
-            <p class="range-text">(G) Verde</p>
+        
+        <div class="range-control" id="range-green">
+            <span class="range-text">(G) Verde</span>
             <input type="range" class="range-input" min="0" max="255" value="0">
             <input type="text" class="range-value" value="0" disabled>
         </div>
 
-        <div class="range-container" id="range-blue">
-            <p class="range-text"> (B) Azul</p>
+        <div class="range-control" id="range-blue">
+            <span class="range-text"> (B) Azul</span>
             <input type="range" class="range-input" min="0" max="255" value="0">
             <input type="text" class="range-value" value="0" disabled>
         </div>
+
         <div class="range-color-box"></div>
-        <footer><p>Desenvolvido por <a href="https://github.com/evandojunior">Evando Junior</a></p></footer>
+
+        <footer class="text-center">
+            <p>Desenvolvido por <a href="https://github.com/evandojunior">Evando Junior</a></p>
+        </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

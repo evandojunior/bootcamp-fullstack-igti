@@ -1,5 +1,16 @@
-.container {
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.text-center {
     text-align: center;
+}
+
+.container {
+   margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px; 
 }
 
 .range-color-box {
@@ -9,15 +20,17 @@
     height: 100px;
 }
 
-.range-container {
+.range-control {
     display: flex;
     justify-content: center;
-    align-items: baseline;
-    padding: 3px;
+    padding: 10px;
 }
 
 .range-value {
-    width: 3em;
+}
+
+.range-text {
+ min-width: 140px;
 }
 
 #range-red  .range-text {
